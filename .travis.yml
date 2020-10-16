@@ -11,5 +11,5 @@ script:
   - docker build -t front .
 after_success:
   - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-  - docker tag front $DOCKER_USER/front:latest
-  - docker push $DOCKER_USER/front:latest
+  - docker tag front $DOCKER_USER/front
+  - docker push $DOCKER_USER/front
