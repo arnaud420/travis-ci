@@ -10,7 +10,7 @@ const fetchFavors = () => async (dispatch: Function): Promise<void> => {
   const response = await fetch(`${BASE_URL}/api/v1/favor`);
   const json = await response.json();
   dispatch({
-    type: GET_FAVORS,
+    type: GET_FAVOR,
     payload: json,
   });
 };
