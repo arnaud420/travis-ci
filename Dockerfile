@@ -1,8 +1,8 @@
-FROM node:10
+FROM node:12
 
 WORKDIR /app/
 
-COPY ./front .
+COPY . .
 
 RUN npm install
 
