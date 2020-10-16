@@ -11,7 +11,7 @@ script:
   - docker build -t back .
 after_success:
   - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-  - docker tag back $DOCKER_USER/back:$TRAVIS_BUILD_NUMBER
-  - docker push $DOCKER_USER/back:$TRAVIS_BUILD_NUMBER
-  - docker tag back $DOCKER_USER/back:latest
-  - docker push $DOCKER_USER/back:latest
+  - docker tag front $DOCKER_USER/front:$TRAVIS_BUILD_NUMBER
+  - docker push $DOCKER_USER/front:$TRAVIS_BUILD_NUMBER
+  - docker tag front $DOCKER_USER/front:latest
+  - docker push $DOCKER_USER/front:latest
